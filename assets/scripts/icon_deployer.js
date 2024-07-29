@@ -1,5 +1,6 @@
 let d = document;
 let ls = localStorage;
+
 export default function deployIcons($iconContainerClass, palette) {
     $iconContainerClass = d.querySelector($iconContainerClass);
     let $deployer = $iconContainerClass.querySelector('.deployer');

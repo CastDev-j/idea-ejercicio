@@ -8,5 +8,7 @@ export const pastelColors = {
     lila: "rgb(221, 160, 221)",
     azulBebe: "rgb(137, 207, 240)",
     mentaPastel: "rgb(152, 251, 152)",
-    salmonClaro: "rgb(255, 160, 122)"
+    salmonClaro: "rgb(255, 160, 122)",
+    verdeAgua: "rgb(173, 216, 230)",
+    amarilloPastel: "rgb(253, 253, 150)"
 };
