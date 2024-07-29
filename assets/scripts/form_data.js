@@ -6,7 +6,7 @@ export default function formData(formClass) {
     let nameInput = form.querySelector("#name");
     let emailInput = form.querySelector("#email");
     let passwordInput = form.querySelector("#password");
-    
+
     form.addEventListener("submit", (e) => {
         e.preventDefault();
         let data = new FormData(form);
@@ -33,20 +33,38 @@ export default function formData(formClass) {
     });
 }
 
+
+const validateName = (name) => {
+    let validRegex = /^[a-zA-Z]{3,16}$/;
+    return !validRegex.test(name);
+}
+
+const validateEmail = (email) => {
+    let validRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+    return !validRegex.test(email);
+}
+
+const validatePassword = (password) => {
+    let validRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&]{8,15}$/;
+    return !validRegex.test(password);
+}
+
+
+
 function validateForm(name, email, password) {
     let flag = true;
 
-    if (name === "") {
+    if (name === "" && validateName(name)) {
         nameInput.classList.add("error");
         flag = false;
     }
 
-    if (email === "") {
+    if (email === "" && validateEmail(email)) {
         emailInput.classList.add("error");
         flag = false;
     }
 
-    if (password === "") {
+    if (password === "" && validatePassword(password)) {
         passwordInput.classList.add("error");
         flag = false;
     }
