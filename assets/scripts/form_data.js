@@ -39,19 +39,16 @@ export default function formData(formClass) {
 
 const validateName = (name) => {
     let validRegex = /^[a-zA-Z]{3,16}$/;
-    console.log(validRegex.test(name));
     return validRegex.test(name);
 }
 
 const validateEmail = (email) => {
     let validRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
-    console.log(validRegex.test(email));
     return validRegex.test(email);
 }
 
 const validatePassword = (password) => {
     let validRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&]{8,15}$/;
-    console.log(validRegex.test(password));
     return validRegex.test(password);
 }
 
